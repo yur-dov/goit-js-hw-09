@@ -6,7 +6,7 @@ stopСhangeColors.addEventListener('click', stopInterval)
 
 const targetBody = document.body;
 
-let timerId
+let timerId = null;
 
 function stopInterval() {
   clearInterval(timerId);
@@ -14,7 +14,7 @@ function stopInterval() {
 }
 
 function setTimeOut() {
-  timerId = setInterval(onClick, 1000);
+  timerId = setInterval(() => { onClick() }, 1000);
   startСhangeColors.disabled = true;
 }
 
